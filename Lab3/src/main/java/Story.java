@@ -6,37 +6,35 @@ import java.util.List;
 
 public class Story {
     public static void main(String[] args) {
-        DubeSpeaker dubeSpeaker = new DubeSpeaker(Role.VILLAIN, "Dube", 3);
-        DubeEarner dubeEarner = new DubeEarner(Role.VILLAIN, "Dube", 3);
-        SprootsSpeaker sprootsSpeaker = new SprootsSpeaker(Role.VILLAIN, "Sproots", 5);
-        SprootsEarner sprootsEarner = new SprootsEarner(Role.VILLAIN, "Sproots", 5);
-        NeznaykaSpeaker neznaykaSpeaker = new NeznaykaSpeaker(Role.HERO, "Neznayka");
-        JulioSpeaker julioSpeaker = new JulioSpeaker(Role.NEUTRAL_CHARACTER, "Julio");
-        MigoSpeaker migoSpeaker = new MigoSpeaker(Role.NEUTRAL_CHARACTER, "Migo");
-        KozlikSpeaker kozlikSpeaker = new KozlikSpeaker(Role.HERO, "Kozlik");
+        Dube dube = new Dube(Role.VILLAIN, "Dube", 3);
+        Sproots sproots1 = new Sproots(Role.VILLAIN, "Sproots", 5);
+        Sproots sproots2 = new Sproots(Role.VILLAIN, "Dube", 3);
+        Neznayka neznayka = new Neznayka(Role.HERO, "Neznayka");
+        Julio julio = new Julio(Role.NEUTRAL_CHARACTER, "Julio");
+        Migo migo = new Migo(Role.NEUTRAL_CHARACTER, "Migo");
+        Kozlik kozlik = new Kozlik(Role.HERO, "Kozlik");
 
-        System.out.println(dubeSpeaker);
-        dubeSpeaker.speak();
-        dubeEarner.earn();
+        System.out.println(dube);
+        dube.speak();
+        dube.earn();
 
-        System.out.println(sprootsSpeaker);
-        sprootsSpeaker.speak();
-        sprootsEarner.earn();
+        System.out.println(sproots1);
+        sproots1.speak();
+        sproots1.earn();
 
-        System.out.println(dubeSpeaker.equals(dubeEarner));
-        System.out.println(sprootsSpeaker.equals(sprootsEarner));
+        System.out.println(dube.equals(sproots2));
 
-        System.out.println(neznaykaSpeaker);
-        neznaykaSpeaker.speak();
+        System.out.println(neznayka);
+        neznayka.speak();
 
-        System.out.println(kozlikSpeaker);
-        kozlikSpeaker.speak();
+        System.out.println(kozlik);
+        kozlik.speak();
 
-        System.out.println(julioSpeaker);
-        julioSpeaker.speak();
+        System.out.println(julio);
+        julio.speak();
 
-        System.out.println(migoSpeaker);
-        migoSpeaker.speak();
+        System.out.println(migo);
+        migo.speak();
 
     }
     

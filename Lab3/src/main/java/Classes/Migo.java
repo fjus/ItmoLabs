@@ -1,8 +1,9 @@
 package Classes;
 
 import Enums.Role;
+import interfaces.ICanSpeak;
 
-public class Migo extends TypicalMoonCitizen{
+public class Migo extends TypicalMoonCitizen implements ICanSpeak {
     public Migo(Role role, String name) {
         super(role, name);
     }
@@ -13,5 +14,10 @@ public class Migo extends TypicalMoonCitizen{
                 "name: "+super.getName()+" "+
                 "role: "+super.getRole()+
                 "}";
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Я Миго");
     }
 }

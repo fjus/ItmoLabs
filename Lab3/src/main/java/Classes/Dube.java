@@ -1,12 +1,22 @@
 package Classes;
 
 import Enums.Role;
+import interfaces.ICanEarnALotOfMoney;
+import interfaces.ICanSpeak;
 
-public abstract class Dube extends Billionaire{
+public class Dube extends Billionaire implements ICanEarnALotOfMoney, ICanSpeak {
 
 
     public Dube(Role role, String name, int billions) {
         super(role, name, billions);
+    }
+    @Override
+    public void earn() {
+        System.out.println("Я зарабатываю, производя мебель");
+    }
+    @Override
+    public void speak() {
+        System.out.println("Я Дубе");
     }
 
     @Override

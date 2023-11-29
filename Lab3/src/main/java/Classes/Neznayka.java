@@ -1,8 +1,9 @@
 package Classes;
 
 import Enums.Role;
+import interfaces.ICanSpeak;
 
-public class Neznayka extends EarthShortie{
+public class Neznayka extends EarthShortie implements ICanSpeak {
     public Neznayka(Role role, String name) {
         super(role, name);
     }
@@ -13,5 +14,9 @@ public class Neznayka extends EarthShortie{
                 "name: "+super.getName()+" "+
                 "role: "+super.getRole()+
                 "}";
+    }
+    @Override
+    public void speak() {
+        System.out.println("Я Незнайка");
     }
 }
